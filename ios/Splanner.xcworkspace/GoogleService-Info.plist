@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>863373120746-imil3c6ilf33pu8uvljo7t0n6i9mm8j1.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.863373120746-imil3c6ilf33pu8uvljo7t0n6i9mm8j1</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCjdX2Vx2ZkTRJdrx0mn1eX0UBz4Wc1tOI</string>
+	<key>GCM_SENDER_ID</key>
+	<string>863373120746</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.splanner</string>
+	<key>PROJECT_ID</key>
+	<string>react-firebasics-development</string>
+	<key>STORAGE_BUCKET</key>
+	<string>react-firebasics-development.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:863373120746:ios:5e71437107717cd06cf393</string>
+	<key>DATABASE_URL</key>
+	<string>https://react-firebasics-development-default-rtdb.firebaseio.com</string>
+</dict>
+</plist>

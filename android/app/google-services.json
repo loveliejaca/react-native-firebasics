@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "863373120746",
+    "firebase_url": "https://react-firebasics-development-default-rtdb.firebaseio.com",
+    "project_id": "react-firebasics-development",
+    "storage_bucket": "react-firebasics-development.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:863373120746:android:198d66b523bfbf266cf393",
+        "android_client_info": {
+          "package_name": "com.splanner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "863373120746-fhoad214j3pnf50es890vsof1nchcadp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9AAEZm1FMkrerAF66f8Y5Jt5anC8R6N8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "863373120746-fhoad214j3pnf50es890vsof1nchcadp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
