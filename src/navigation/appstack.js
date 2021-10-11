@@ -70,23 +70,7 @@ const AppStack = props => {
           },
         }}
         />
-        <Screen
-        name="Profile"
-        component={HomeScreen}
-        options={{
-          title: '',
-          headerTransparent: true,
-          headerStyle: {
-            elevation: 0,
-            shadowOpacity: 0
-          },
-          headerLeft: null,
-          headerTintColor: '#fff',
-          headerTitleStyle: {
-            fontWeight: 'bold',
-          },
-        }}
-        />
+      
       </Navigator>
     )
 }

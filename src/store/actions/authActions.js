@@ -2,7 +2,6 @@
 export const authLogin = (credentials, callBack) => {
   return (dispatch, getState, {getFirebase, getFirestore}) => {
 
-
     const firebase = getFirebase();
     const firestore = getFirestore();
 

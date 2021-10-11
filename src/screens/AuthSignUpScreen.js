@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import LottieView from 'lottie-react-native'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import { authLogin } from '../store/actions/authActions'
+import { signUp } from '../store/actions/authActions'
 
 
 import {
@@ -21,6 +21,7 @@ import {
 
 import FormInput from '../components/FormInput';
 import FormButton from '../components/FormButton';
+
 import {globalStyles} from '../styles/global'
 
 
@@ -36,8 +37,11 @@ const AuthSignUpScreen  = (props) => {
       email: email,
       password: password
     }
-    console.log("-------------- submit", props);
 
+    if(password !== confirmPassword) {
+
+    }
+    console.log("-------------- submit", props);
 
   }
 
@@ -61,59 +65,56 @@ const AuthSignUpScreen  = (props) => {
         />
       </View>
       <View style={styles.innerContainer}>
-      <Form onSubmit={user => handleSubmit(user)}>
-        <FormInput
-          labelValue={firstname}
-          onChangeText={(userFirstname) => setFirstname(userFirstname)}
-          placeholderText="Firstname"
-          iconType=""
-          autoCapitalize="none"
-          autoCorrect={false}
-        />
-        <FormInput
-          labelValue={lastname}
-          onChangeText={(userLastname) => setLastname(userLastname)}
-          placeholderText="Lastname"
-          iconType=""
-          autoCapitalize="none"
-          autoCorrect={false}
-        />
-        <FormInput
-          labelValue={email}
-          onChangeText={(userEmail) => setEmail(userEmail)}
-          placeholderText="Email"
-          iconType=""
-          keyboardType="email-address"
-          autoCapitalize="none"
-          autoCorrect={false}
-        />
-        <FormInput
-          labelValue={password}
-          onChangeText={(userPassword) => setPassword(userPassword)}
-          placeholderText="Password"
-          iconType=""
-          secureTextEntry={true}
-        />
-        <FormInput
-          labelValue={confirmPassword}
-          onChangeText={(userConfirmPassword) => setPassword(userConfirmPassword)}
-          placeholderText="Confirm Password"
-          iconType=""
-          secureTextEntry={true}
-        />
+      <FormInput
+        labelValue={firstname}
+        onChangeText={(userFirstname) => setFirstname(userFirstname)}
+        placeholderText="Firstname"
+        iconType=""
+        autoCapitalize="none"
+        autoCorrect={false}
+      />
+      <FormInput
+        labelValue={lastname}
+        onChangeText={(userLastname) => setLastname(userLastname)}
+        placeholderText="Lastname"
+        iconType=""
+        autoCapitalize="none"
+        autoCorrect={false}
+      />
+      <FormInput
+        labelValue={email}
+        onChangeText={(userEmail) => setEmail(userEmail)}
+        placeholderText="Email"
+        iconType=""
+        keyboardType="email-address"
+        autoCapitalize="none"
+        autoCorrect={false}
+      />
+      <FormInput
+        labelValue={password}
+        onChangeText={(userPassword) => setPassword(userPassword)}
+        placeholderText="Password"
+        iconType=""
+        secureTextEntry={true}
+      />
+      <FormInput
+        labelValue={confirmPassword}
+        onChangeText={(userConfirmPassword) => setPassword(userConfirmPassword)}
+        placeholderText="Confirm Password"
+        iconType=""
+        secureTextEntry={true}
+      />
 
-        <FormButton
-          buttonTitle="Sign Up"
-          onPress={() => handleSubmit()}
-        />
-      </Form>
-
-      <View style={styles.signInCon}>
-        <Text style={styles.cmnTxt}> Already have and account? </Text>
-        <TouchableOpacity style={styles.forgotButton}   onPress={() => props.navigate('Login')}>
-          <Text style={styles.signInText}>Log In</Text>
-        </TouchableOpacity>
-      </View>
+      <FormButton
+        buttonTitle="Sign Up"
+        onPress={() => handleSubmit()}
+      />
+        <View style={styles.signInCon}>
+          <Text style={styles.cmnTxt}> Already have and account? </Text>
+          <TouchableOpacity style={styles.forgotButton} onPress={() => props.navigation.navigate('Login')}>
+            <Text style={styles.signInText}>Log In</Text>
+          </TouchableOpacity>
+        </View>
       </View>
 
     </ScrollView>
@@ -190,7 +191,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    authLogin: bindActionCreators(authLogin, dispatch)
+    signUp: bindActionCreators(signUp, dispatch)
   }
 }
 

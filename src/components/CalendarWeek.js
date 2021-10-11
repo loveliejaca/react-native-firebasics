@@ -45,14 +45,16 @@ const CalendarWeek  = (props) => {
       hasEvents: dayHasEvents
     };
 
-    days.push(<CalendarDay day={day} selected={selected} select={select}/>);
+    days.push(<CalendarDay day={day} selected={selected} select={select} key={date.date()}/>);
+
     date = date.clone();
     date.add(1, "d");
   }
 
   return (
     <View style={styles.container}>
-      {days}
+      { days}
+
     </View>
   );
 }

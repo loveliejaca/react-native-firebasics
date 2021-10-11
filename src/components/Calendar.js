@@ -1,5 +1,5 @@
 import React, { useEffect,useState } from 'react';
-import moment from "moment";
+import moment from 'moment';
 import SelectDropdown from 'react-native-select-dropdown'
 
 import {globalPallete} from '../styles/global'
@@ -52,10 +52,10 @@ const Calendar  = (props) => {
     setState({
       ...state,
       selectedMonth: day.date,
-      selectedDay: day.date.clone()
+      selectedDay: day.date
     });
 
-    props.getSelectedDateEvents(day.date.toDate())
+    props.getSelectedDateEvents(moment(day.date).toDate())
   }
 
   const renderWeeks = () => {

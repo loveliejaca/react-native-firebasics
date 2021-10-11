@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import moment from 'moment';
 
 import {
   ScrollView,
@@ -27,8 +28,8 @@ const CalendarDay  = (props) => {
   let classSelected = day.date.isSame(selected) ? styles.isSelected : '';
 
   return (
-    <View style={[styles.calendarTd, classCurrentMonth, classSelected, classToday]} onPress={select(day)}>
-      <Text style={styles.calendarDay}>{day}</Text>
+    <View style={[styles.calendarTd, classCurrentMonth, classSelected, classToday]} >
+      <Text style={styles.calendarDay}>{day.number}</Text>
     </View>
   )
 }

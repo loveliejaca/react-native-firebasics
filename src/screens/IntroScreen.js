@@ -45,7 +45,7 @@ const IntroScreen  = ({ navigation }) => {
       })
 
   return (
-    <View style={globalStyles.container}>
+    <View style={styles.container}>
       <ImageBackground
         style={globalStyles.backgroundImage}
         source={require('../assets/images/space-bg.png')}

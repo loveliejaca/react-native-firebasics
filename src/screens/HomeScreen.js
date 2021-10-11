@@ -1,6 +1,7 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import LottieView from 'lottie-react-native'
 import { connect, useSelector } from 'react-redux'
+import moment from 'moment'
 
 import {globalStyles, globalPallete} from '../styles/global'
 
@@ -22,6 +23,7 @@ import Calendar from '../components/Calendar';
 
 const HomeScreen  = (props) => {
   const currentUser = useSelector((state) => state.firebase.auth)
+  const [selectedDate, setSelectedDate] = useState(moment().toDate())
 
   function getSelectedDateEvents(date = moment().toDate()) {
     setSelectedDate(date)
